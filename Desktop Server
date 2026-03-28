@@ -1,0 +1,59 @@
+## 1. System Specifications (BOM)
+This desktop computer was bought on ***March 09 of 2026*** and it had ***400 hours of SSD time***
+
+| Component       | Model / Specification            | Role                         |
+| --------------- | -------------------------------- | ---------------------------- |
+| **CPU**         | AMD Ryzen 7 5700X (8C/16T)       | Compute / Virtualization     |
+| **Motherboard** | Gigabyte B450 DS3H (Rev 1.0)     | System Backbone              |
+| **GPU**         | NVIDIA GeForce RTX 3060 Ti (8GB) | AI/Ollama & HW Transcoding   |
+| **RAM**         | 32GB Crucial Ballistix DDR4-3200 | VM Memory Pool               |
+| **Storage**     | 1TB Cusu M.2 NVMe SSD            | Boot & VM Storage (LVM-Thin) |
+| **PSU**         | [Add Wattage/Model here]         | Power Delivery               |
+| **Chassis**     | 7x RGB Fans + Tower Cooler       | Thermal Management           |
+
+## 2. Physical Connectivity
+
+* **Management Port:** Onboard Realtek GbE → **Tp-Link Deco X10**.
+* **Display Output:** None. Can only access it via SSH unless a monitor is connected
+
+## 3. Firmware / BIOS Optimization
+
+*These settings were applied after a CMOS reset to ensure Proxmox stability.*
+
+### A. Performance & Virtualization (M.I.T. Tab)
+
+1. **SVM Mode:** `Enabled` (Required for KVM/Proxmox).
+2. **X.M.P. Profile:** `Profile 1` (Ensures RAM runs at rated 3200MHz vs 2133MHz default).
+* *Path:* `M.I.T. > Advanced Memory Settings`.
+
+
+
+### B. IOMMU & PCIe Passthrough (Peripherals Tab)
+
+*Required for passing the 3060 Ti directly to a VM (like for Ollama).*
+
+1. **Above 4G Decoding:** `Enabled`.
+2. **Re-Size BAR Support:** `Auto`.
+3. **IOMMU:** `Enabled`.
+* *Path:* `Peripherals > AMD CBS > NBIO Common Options`.
+
+
+
+---
+
+## 4. Hardware Maintenance & Thermal Log
+
+
+| Date | Action | Result |
+| --- | --- | --- |
+| **09/03/2026** | Initial Build & BIOS Tuning | System POSTs with XMP/SVM active. |
+
+---
+
+## 5. Disaster Recovery (Hardware)
+
+* **BIOS Reset:** To reset settings, short the `CLR_CMOS` pins or remove the CR2032 battery for 30 seconds.
+* **Boot Priority:** 1. Cusu NVMe, 2. USB Generic (For Re-installs).
+
+## 6. Maintenance Log
+* **09/03/2026**: Initial Build & BIOS Tuning 
