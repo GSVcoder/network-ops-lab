@@ -1,30 +1,3 @@
-# 🛠️ HomeLab Node: Ryzen 7 Hypervisor
-> **Status:** Operational | **Initial Deployment:** March 09, 2026
-
-## 1. System Specifications (BOM)
-*This system was acquired with 400 hours of recorded SSD runtime on 09/03/2026.*
-
-| Component       | Model / Specification            | Role / Rationale                         |
-| --------------- | -------------------------------- | ---------------------------------------- |
-| **CPU** | AMD Ryzen 7 5700X (8C/16T)       | Compute / High-density Virtualization    |
-| **Motherboard** | Gigabyte B450 DS3H (Rev 1.0)     | System Backbone (B450 Chipset)           |
-| **GPU** | NVIDIA GeForce RTX 3060 Ti (8GB) | AI/Ollama Inference & HW Transcoding     |
-| **RAM** | 32GB Crucial Ballistix DDR4-3200 | VM Memory Pool (ECC-non-req)             |
-| **Storage** | 1TB Cusu M.2 NVMe SSD            | Boot & VM Storage (LVM-Thin Partitioned) |
-| **PSU** | [Add Wattage/Model here]         | Power Delivery                           |
-| **Chassis** | 7x RGB Fans + Tower Cooler       | Active Thermal Management                |
-
----
-
-## 2. Physical & Network Connectivity
-* **Management Port:** Onboard Realtek GbE → **Tp-Link Deco X10**.
-* **Headless Setup:** No active display output. Management is handled exclusively via **SSH** and **Proxmox Web UI**.
-
----
-
-## 3. Firmware / BIOS Optimization
-*Baseline configuration applied post-CMOS reset to ensure Proxmox stability.*
-
 ### A. Performance & Virtualization
 * **SVM Mode:** `Enabled` (Required for KVM/Proxmox virtualization).
 * **X.M.P. Profile:** `Profile 1` (Ensures RAM stability at 3200MHz vs 2133MHz default).
