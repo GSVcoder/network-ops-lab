@@ -3,7 +3,7 @@ A professional-tier homelab environment designed for high-availability service h
 
 ## 🏗️ Hardware & Core Infrastructure
 * **Hypervisor:** Proxmox VE (LXC & VM Orchestration)
-* **Networking:** MikroTik hAP aX2 (Main Router) | MikroTik CSS610 Switch
+* **Networking:** [[Mikrotik Ax2 Setup.md]] (Main Router) | MikroTik CSS610 Switch
 * **Storage & Backup:** Dedicated Proxmox Backup Server (PBS)
 * **Compute:** AMD Ryzen 7 | 8GB VRAM GPU (Optimized for 7B LLM Inference)
 
