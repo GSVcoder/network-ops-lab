@@ -2,7 +2,7 @@
 A professional-tier homelab environment designed for high-availability service hosting, local AI research, and CompTIA Network+ validation.
 
 ## 🏗️ Hardware & Core Infrastructure
-* **Hypervisor:** [Proxmox VE](<./Desktop Proxmox Server.md>) ((LXC & VM Orchestration)
+* **Hypervisor:** [Proxmox VE](<./Desktop Proxmox Server.md>) (LXC & VM Orchestration)
 * **Networking:** [Mikrotik HaP Ax2](<./Mikrotik Ax2 Setup.md>) (Main Router) | [Mikrotik CSS610 Switch](<./Mikrotik CSS610 Switch.md>) (Switch)
 * **Storage & Backup:** Dedicated Proxmox Backup Server (PBS)
 * **Compute:** AMD Ryzen 7 | 8GB VRAM GPU (Optimized for 7B LLM Inference)
