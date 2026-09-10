@@ -8,7 +8,7 @@ A professional-tier homelab environment designed for high-availability service h
 * **Compute:** AMD Ryzen 7 | 8GB VRAM GPU (Optimized for 7B LLM Inference)
 
 ## 🌐 Network Services & Security
-* **Traffic Management:** **Nginx Proxy Manager** with Cloudflare integration for secure SSL termination.
+* **Traffic Management:** **[Nginx Proxy Manager](<./Nginx.md>) (LXC & VM Orchestration)** with Cloudflare integration for secure SSL termination.
 * **DNS & Ad-blocking:** Redundant **Pi-Hole** instances for network-wide sinkholing.
 * **Remote Access:** **Wireguard** VPN for secure, encrypted entry to the internal network.
 * **Credential Management:** Self-hosted **Vaultwarden** instance.
