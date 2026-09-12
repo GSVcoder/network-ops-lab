@@ -1,27 +1,24 @@
-
-
 ### 1. Hardware Inventory
 
 - **CPU:** AMD Ryzen 7 5700X (8C / 16T)
-    
-      
-    
 - **Motherboard:** Gigabyte B450 DS3H (**Revision 1.0**)
-    
-      
-    
 - **GPU:** EVGA RTX 3060 Ti (8GB VRAM)
-    
-      
-    
 - **RAM:** 32GB Crucial Ballistix DDR4-3200MHz
-    
-      
-    
 - **Storage:** Cusu 1TB M.2 NVMe SSD
     
       
-    
+### A. Performance & Virtualization
+* **SVM Mode:** `Enabled` (Required for KVM/Proxmox virtualization).
+* **X.M.P. Profile:** `Profile 1` (Ensures RAM stability at 3200MHz vs 2133MHz default).
+* **Path:** `M.I.T. > Advanced Memory Settings`.
+
+
+### B. IOMMU & PCIe Passthrough
+*Crucial for passing the RTX 3060 Ti directly to a Linux VM for Ollama/AI workloads.*
+* **Above 4G Decoding:** `Enabled`.
+* **Re-Size BAR Support:** `Auto`.
+* **IOMMU:** `Enabled`.
+* **Path:** `Peripherals > AMD CBS > NBIO Common Options`.
 
 ### 2. Installation & Network Topology
 
