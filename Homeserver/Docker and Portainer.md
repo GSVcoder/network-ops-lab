@@ -69,4 +69,4 @@
         
           
         
-- **Initial Setup:** Completed administrative bootstrap using the initial setup token extracted directly from the Portainer container logs using the command ``
+- **Initial Setup:** Completed administrative bootstrap using the initial setup token extracted directly from the Portainer container logs using the command `docker logs portainer`
