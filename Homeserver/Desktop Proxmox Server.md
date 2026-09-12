@@ -21,7 +21,7 @@
 
 ---
 
-## 2. ### Physical Network Topology
+## 2. Physical Network Topology
 * **Endpoint:** Proxmox Node
 * **Switch:** MikroTik CSS610 Port (`SWITCH_IP`)
 * **Router:** MikroTik hAP ax² (`AX2_ROUTER_IP`)
